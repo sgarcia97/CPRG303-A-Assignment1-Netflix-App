@@ -1,44 +1,12 @@
 import React from "react"
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, Image, StatusBar, StatusBarStyle } from "react-native";
+import { StyleSheet, Image, StatusBar } from "react-native";
 import {BlurView} from "expo-blur"
-import { createStaticNavigation, useNavigation } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStaticNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Icon} from "react-native-elements"
-import MovieSection from "./app/MovieSection"
-import Filters from "./app/Filters"
-import Data from "./app/data.json"
-import Header from "./app/Header"
 import ProfileScreen from "./app/ProfileScreen";
 import HomeScreen from "./app/HomeScreen";
 import New from "./app/New";
-//import { StatusBar } from "expo-status-bar";
-
-/*
-const RootStack = createNativeStackNavigator({
-  initialRouteName: 'Home',
-  screens: {
-    Home: {
-      screen: HomeScreen,
-      options: {
-
-      }
-    },
-    Profile: {
-      screen: ProfileScreen,
-      options: {
-
-      }
-    },
-    New : {
-      screen: New,
-      options: {
-
-      }
-    }
-    }
-});
-*/
 
 const MyTabs = createBottomTabNavigator({
   screenOptions: ({route}) => ({
@@ -96,7 +64,6 @@ const MyTabs = createBottomTabNavigator({
 const Navigation = createStaticNavigation(MyTabs);
 
 export default function App() {
-
   return <><StatusBar/><Navigation /></>
 }
 

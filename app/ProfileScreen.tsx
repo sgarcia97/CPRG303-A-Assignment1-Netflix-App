@@ -7,6 +7,22 @@ import Header from './Header'
 import Feather from 'react-native-vector-icons/Feather';
 import NotifItem from "./NotifItem";
 
+//sample json for notifications
+const notifications = [
+  {
+    line1: "Don't miss out",
+    line2: "Experience more Dexter",
+    line3: "Dec. 28",
+    imageSource: require('../assets/notif1.png'),
+  },
+  {
+    line1: "Rewatch your favorite moments",
+    line2: "See what you've watched",
+    line3: "Dec. 20",
+    imageSource: require('../assets/notif2.png'),
+  },
+];
+
 
 const ProfileScreen = () => {
 
@@ -37,18 +53,18 @@ const ProfileScreen = () => {
                   <Feather name="chevron-right" size={22} color="white" />
                 </View>
               </View>
-              {/* Notification Items */}
+              {/* notification items */}
               <View style={styles.notifItemContainer}>
-                <NotifItem
-                  line1 = "First Line"
-                  line2 = "Second Line"
-                  line3 = "Third Line"
+                {notifications.map((notif, index) => (
+                  <NotifItem
+                  key={index}
+                  line1 = {notif.line1}
+                  line2 = {notif.line2}
+                  line3 = {notif.line3}
+                  imageSource={notif.imageSource}
                 />
-                <NotifItem
-                  line1 = "First Line"
-                  line2 = "Second Line"
-                  line3 = "Third Line"
-                />
+                )
+              )} 
               </View>
               
               {/* Downloads */}

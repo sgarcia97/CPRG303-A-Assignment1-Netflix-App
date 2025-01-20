@@ -4,7 +4,7 @@ import showAlert from './utils/showAlert';
 
 type MovieProps = {
     title: string;
-    img: string
+    img: string;
 }
 
 const Movie = (props: MovieProps) => {
