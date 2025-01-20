@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ImageSourcePropType } from 'react-native';
 
-interface NotifItemProps {
+type NotifItemProps = {
   line1: string;  // Line 1 - bold 
   line2: string;  // Line 2 - just text
   line3: string;  // Line 3 - should be date
   imageSource: ImageSourcePropType; //img prop
-}
+};
 
-const NotifItem: React.FC<NotifItemProps> = ({ line1, line2, line3, imageSource }) => {
+const NotifItem = ({ line1, line2, line3, imageSource } : NotifItemProps) => {
   return (
     <View style={styles.container}>
       {/* Red Dot bullet */}
