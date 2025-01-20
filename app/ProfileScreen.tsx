@@ -29,11 +29,9 @@ const ProfileScreen = () => {
   const navigation = useNavigation();  
     return (
     
-        <SafeAreaView style={styles.safearea}>
-          <ScrollView>
-            <View style={styles.section}>
-              <Header user="My NetFlix"/>
-            </View>
+      <ScrollView style={styles.safearea} stickyHeaderIndices={[0]} onScroll={() => {}} showsVerticalScrollIndicator={false}>
+      <Header user="My Netflix" filters={false}/>
+          
             <View style={styles.profileSection}>
               <Image 
                 source={require('../assets/profile.png')}
@@ -81,11 +79,12 @@ const ProfileScreen = () => {
               
             </View>
             <View style={styles.mainsection}>
-              <MovieSection subtitle="TV Shows & Movies You've Liked" movies={Data} moviesize="small"/>
+              <MovieSection subtitle="TV Shows & Movies You've Liked" movies={Data} moviesize="share" mylist={true} mylisttitle="See All"/>
               <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
             </View>
+            <View style={styles.spacer}></View>
           </ScrollView>
-        </SafeAreaView>
+  
       );
 }
 
@@ -93,8 +92,13 @@ export default ProfileScreen;
 
 const styles = StyleSheet.create({
     safearea:{
+      position:"relative",
       flex:1,
-      backgroundColor:"#000"
+      backgroundColor:"#000",
+      
+    },
+    spacer:{
+      height:160
     },
     container: {
       flex: 1,
@@ -193,7 +197,8 @@ const styles = StyleSheet.create({
       width: 80,
       backgroundColor: "white",
       marginTop: 20,
-      marginBottom: 5
+      marginBottom: 5,
+      borderRadius:10
     },
     profileTextGroup: {
       flex: 1,

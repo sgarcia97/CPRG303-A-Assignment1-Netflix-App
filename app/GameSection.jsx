@@ -1,12 +1,9 @@
 import React from "react"
 import {View,ScrollView,Text,StyleSheet,FlatList} from "react-native"
-import Movie from "./Movie"
-import MovieBig from "./MovieBig"
-import MovieOptions from "./MovieOptions"
-import MovieShare from "./MovieShare"
-import Data from "./data.json"
-import MyList from "./MyList"
 
+import GameData from "./gamedata.json"
+import MyList from "./MyList"
+import Game from "./Game"
 
 const MovieSection = (props) => {
  if(props.mylist){
@@ -18,19 +15,12 @@ const MovieSection = (props) => {
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 <View style={styles.hcontainer}>
                     {
-                        props.movies.map(d=>{
-                            if(props.moviesize == "small") {
+                        GameData.map(d=>{
+                          
                             return(
                                 
-                            <Movie key={d.id} title={d.title} img={d.img}/>
+                            <Game key={d.id} title={d.title} img={d.img}/>
                             )
-                            } else if (props.moviesize == "big") {
-                                return(<MovieBig key={d.id} title={d.title} img={d.img}/>)
-                            } else if (props.moviesize == "opt") {
-                                return(<MovieOptions key={d.id} title={d.title} img={d.img}/>)
-                            }else if (props.moviesize == "share") {
-                                return(<MovieShare key={d.id} title={d.title} img={d.img}/>)
-                            }
                             
                         })
                     }

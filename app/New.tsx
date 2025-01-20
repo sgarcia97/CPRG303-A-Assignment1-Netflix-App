@@ -16,13 +16,8 @@ const New = () => {
      let imgg: string = 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaAjh2jshEy1jjYTgwnTruzPOUtn7iDI1X3K32f13dAeSd-uIhZdz3Jl_wOgp1v7J_vLVQ4rx0PFPedlWyFu2obLAnstM8Y_zvKYTcnnRYJDDnJ6J1K681aD4U5Xvxw1j1jpzw.jpg?r=c11&quot;';
       return (
     
-        <SafeAreaView style={styles.safearea}>
-          <ScrollView>
-       <View style={styles.section}>
-        <Header user="New & Hot"/>
-        <Filters/>
-       
-        </View>
+        <ScrollView style={styles.safearea} stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
+      <Header user="New & Hot" filters={false}/>
         <View style={styles.mainsection}>
           <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt"/>
           <MovieSection subtitle="Because you watched Squid Game" movies={Data} moviesize="small"/>
@@ -35,8 +30,9 @@ const New = () => {
           <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
     
      </View>
+     <View style={styles.spacer}></View>
      </ScrollView>
-        </SafeAreaView>
+   
     
     
       );
@@ -48,6 +44,9 @@ const styles = StyleSheet.create({
     safearea:{
       flex:1,
       backgroundColor:"#000"
+    },
+    spacer:{
+      height:160
     },
     container: {
       flex: 1,

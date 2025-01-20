@@ -1,11 +1,14 @@
 import React from "react"
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import {BlurView} from 'expo-blur'
 import MovieSection from "./MovieSection"
+import GameSection from "./GameSection"
 import Filters from "./Filters"
 import Data from "./data.json"
 import Header from './Header'
 import LandingButton from './LandingButton'
+
 
 
 const HomeScreen = () => {
@@ -16,11 +19,11 @@ const HomeScreen = () => {
       return (
     
     
-    <ScrollView style={styles.safearea} stickyHeaderIndices={[0]}>
-      <Header user="For Group 4"/>
+    <ScrollView style={styles.safearea} stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
+      <Header user="For Group 4" filters={true}/>
       <View style={styles.section}>
         
-        <Filters/>
+        <BlurView tint="dark" intensity={100} style={{flex:1,position:"relative", paddingInline:20, paddingBottom:20}} >
         <View style={styles.landing}>
           <Image style={styles.imageback} source={{uri:imgg}}></Image>
           <View style={styles.imagetint}></View>
@@ -32,9 +35,11 @@ const HomeScreen = () => {
             </View>
           </View>
         </View>
+        </BlurView>
       </View>
       <View style={styles.mainsection}>
-        <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt"/>
+        <GameSection subtitle="Mobile Games" movies={Data} moviesize="game" mylist={true} mylisttitle="My List"/>
+        <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt" />
         <MovieSection subtitle="Because you watched Squid Game" movies={Data} moviesize="small"/>
         <MovieSection subtitle="Today's Top Picks for You" movies={Data} moviesize="small"/>
         <MovieSection subtitle="Critically Acclaimed Movies" movies={Data} moviesize="small"/>
@@ -45,6 +50,7 @@ const HomeScreen = () => {
         <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
     
       </View>
+      <View style={styles.spacer}></View>
     </ScrollView>
       
     
@@ -59,6 +65,9 @@ const styles = StyleSheet.create({
       flex:1,
       backgroundColor:"#000"
     },
+    spacer:{
+        height:160
+      },
     container: {
       flex: 1,
       gap:10,
@@ -113,7 +122,7 @@ const styles = StyleSheet.create({
     },
     section:{
       flex: 1,
-      paddingInline:20
+      
     },
     mainsection:{
       flex: 1,

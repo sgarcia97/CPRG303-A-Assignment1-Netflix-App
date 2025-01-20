@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     width: 120,
     backgroundColor: 'transparent', 
     marginRight: 10,
+    borderRadius:5
   }
 });
 
