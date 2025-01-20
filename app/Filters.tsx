@@ -1,10 +1,6 @@
 import React from "react"
-import {View, Text, Button, StyleSheet} from "react-native"
+import {View, Text, StyleSheet} from "react-native"
 import {Icon} from "react-native-elements"
-
-type Filter = {
-
-}
 
 const Filters = () => {
     return(
@@ -14,7 +10,6 @@ const Filters = () => {
             <View style={styles.button} ><Text style={styles.buttontext}>Categories</Text><Icon name="chevron-down" type="feather" size={20} color="#ffffff"/></View>
         </View>
     )
-
 }
 
 export default Filters

@@ -1,82 +1,91 @@
 import React from "react"
 import { StyleSheet, Text, View, SafeAreaView, ScrollView, Image } from 'react-native';
-import { createStaticNavigation, useNavigation } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Icon} from "react-native-elements"
+import { useNavigation } from '@react-navigation/native';
 import MovieSection from "./MovieSection"
-import Filters from "./Filters"
 import Data from "./data.json"
 import Header from './Header'
-import LandingButton from './LandingButton'
+import Feather from 'react-native-vector-icons/Feather';
+import NotifItem from "./NotifItem";
+
+//sample json for notifications
+const notifications = [
+  {
+    line1: "Don't miss out",
+    line2: "Experience more Dexter",
+    line3: "Dec. 28",
+    imageSource: require('../assets/notif1.png'),
+  },
+  {
+    line1: "Rewatch your favorite moments",
+    line2: "See what you've watched",
+    line3: "Dec. 20",
+    imageSource: require('../assets/notif2.png'),
+  },
+];
 
 
 const ProfileScreen = () => {
 
-  const navigation = useNavigation();
-      
-      type Person = {
-        name: string;
-        age: number;
-        isStudent?: boolean; //The ? mark means it is optional 
-        height: number;
-        //vac: vacationDest
-      }
-    
-      interface Person2 {
-        name: string; 
-        age: number;
-        isStudent: boolean;
-        height: number;
-      }
-    
-      const data: Person ={
-        name: "Jane Paul",
-        age: 25,
-        isStudent : true,
-        height: 5.11,
-        //vac: vacationDest("Canada")
-      }
-    
-      const data2: Person2 ={
-        name: "Peter Parker",
-        age: 43,
-        isStudent : true,
-        height: 6.2,
-      }
-    
-      const datalist = [data, data2];
-    
-      console.log(datalist[0].name);
-    
-    const name : string = "John Doe";
-    let count : number = 2;
-    let occupation: string = "Software Developer";
-     let imgg: string = 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaAjh2jshEy1jjYTgwnTruzPOUtn7iDI1X3K32f13dAeSd-uIhZdz3Jl_wOgp1v7J_vLVQ4rx0PFPedlWyFu2obLAnstM8Y_zvKYTcnnRYJDDnJ6J1K681aD4U5Xvxw1j1jpzw.jpg?r=c11&quot;';
-      return (
+  const navigation = useNavigation();  
+    return (
     
         <SafeAreaView style={styles.safearea}>
           <ScrollView>
-       <View style={styles.section}>
-        <Header user="My Netflix"/>
-      
-       
-        </View>
-        <View style={styles.mainsection}>
-          <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt"/>
-          <MovieSection subtitle="Because you watched Squid Game" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Today's Top Picks for You" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Critically Acclaimed Movies" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Only on Netflix" movies={Data} moviesize="big"/>
-          <MovieSection subtitle="Blockbuster Movies" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Relentless Crime Thrillers" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Your Next Watch" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
-    
-     </View>
-     </ScrollView>
+            <View style={styles.section}>
+              <Header user="My NetFlix"/>
+            </View>
+            <View style={styles.profileSection}>
+              <Image 
+                source={require('../assets/profile.png')}
+                style={styles.profileImage}
+              />
+              <View style={styles.profileTextGroup}>
+                <Text style={styles.profileText}>Group 4</Text>
+                <Feather name="chevron-down" size={30} color="white" />
+              </View>
+              {/* Notification */}
+              <View style={styles.profileSub}>
+                <View style={styles.iconContainer1}>
+                  <Feather name="bell" size={24} color="white" />
+                </View>
+                <Text style={styles.profileSubText}>Notifications</Text>
+                <View style={styles.iconContainer2}>
+                  <Feather name="chevron-right" size={22} color="white" />
+                </View>
+              </View>
+              {/* notification items */}
+              <View style={styles.notifItemContainer}>
+                {notifications.map((notif, index) => (
+                  <NotifItem
+                  key={index}
+                  line1 = {notif.line1}
+                  line2 = {notif.line2}
+                  line3 = {notif.line3}
+                  imageSource={notif.imageSource}
+                />
+                )
+              )} 
+              </View>
+              
+              {/* Downloads */}
+              <View style={styles.profileSub}>
+                <View style={styles.iconContainer3}>
+                  <Feather name="download" size={24} color="white" />
+                </View>
+                <Text style={styles.profileSubText}>Downloads</Text>
+                <View style={styles.iconContainer2}>
+                  <Feather name="chevron-right" size={22} color="white" />
+                </View>
+                
+              </View>
+              
+            </View>
+            <View style={styles.mainsection}>
+              <MovieSection subtitle="TV Shows & Movies You've Liked" movies={Data} moviesize="small"/>
+              <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
+            </View>
+          </ScrollView>
         </SafeAreaView>
-    
-    
       );
 }
 
@@ -168,6 +177,63 @@ const styles = StyleSheet.create({
     },
     buttontext: {
       color:"white"
+    },
+    profileSection: {
+      flex: 1,
+      justifyContent: 'center', 
+      alignItems: 'center', 
+    },
+    profileText: {
+      color: "white",
+      fontSize: 20,
+      fontWeight:700
+    },
+    profileImage: {
+      height: 80,
+      width: 80,
+      backgroundColor: "white",
+      marginTop: 20,
+      marginBottom: 5
+    },
+    profileTextGroup: {
+      flex: 1,
+      flexDirection: 'row'
+    },
+    iconContainer1: {
+      backgroundColor: 'red', 
+      borderRadius: 25, 
+      padding: 10, 
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginHorizontal: 5
+    },
+    iconContainer2: {
+      marginLeft: 'auto'
+    },
+    iconContainer3: {
+      backgroundColor: '#4969E4', 
+      borderRadius: 25, 
+      padding: 10, 
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginHorizontal: 5
+    },
+    profileSub: {
+      width: '100%',
+      flexDirection: 'row', 
+      justifyContent: 'space-between', 
+      alignItems: 'center', 
+      padding: 3,
+    },
+    profileSubText: {
+      color: "white",
+      fontWeight: 700,
+      fontSize: 16,
+      marginHorizontal: 5
+    },
+    notifItemContainer: {
+      backgroundColor: "black",
+      width: "100%",
     }
   });
   

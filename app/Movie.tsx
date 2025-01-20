@@ -1,22 +1,30 @@
 import React from "react"
-import {View, Text, StyleSheet, ImageBackground, Image, TouchableNativeFeedback, TouchableHighlight} from "react-native"
+import {View, StyleSheet, Image, TouchableHighlight} from "react-native"
+import showAlert from './utils/showAlert';
 
 type MovieProps = {
     title: string;
-    img: string
+    img: string;
 }
 
 const Movie = (props: MovieProps) => {
-    const onPress = () => {alert(props.title)}
+
+    const onPress = () => {
+        showAlert(props.title, 'Alert Button pressed', [
+          { text: 'Cancel', style: 'cancel' },
+          { text: 'OK', onPress: () => console.log('OK Pressed') },
+        ]);
+    };
+
     return(
         <TouchableHighlight onPress={onPress}>
-        <View style={styles.movie}><Image source={{uri:props.img}} resizeMode="cover" style={styles.imageback}>
-            </Image></View>
-            </TouchableHighlight>
+            <View style={styles.movie}>
+                <Image source={{uri:props.img}} resizeMode="cover" style={styles.imageback}>
+                </Image>
+            </View>
+        </TouchableHighlight>
     );
 }
-
-
 
 const styles = StyleSheet.create({
     movie :{

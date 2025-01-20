@@ -25,8 +25,6 @@ const Movie = (props: MovieProps) => {
     );
 }
 
-
-
 const styles = StyleSheet.create({
     movie :{
     width:112,

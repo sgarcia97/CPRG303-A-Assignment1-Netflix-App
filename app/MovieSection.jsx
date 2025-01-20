@@ -5,25 +5,23 @@ import MovieBig from "./MovieBig"
 import MovieOptions from "./MovieOptions"
 import Data from "./data.json"
 
-
 const MovieSection = (props) => {
- console.log(Data)
+ //console.log(Data)
     return(
         <View>
             <Text style={styles.subtitle}>{props.subtitle}</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-             <View style={styles.hcontainer}>
+                <View style={styles.hcontainer}>
                     {
                         Data.map(d=>{
-                            if(props.moviesize == "small"){
+                            if(props.moviesize == "small") {
                             return(
                                 
                             <Movie key={d.id} title={d.title} img={d.img}/>
                             )
-                            }else if(props.moviesize == "big"){
+                            } else if (props.moviesize == "big") {
                                 return(<MovieBig key={d.id} title={d.title} img={d.img}/>)
-                            }
-                            else if(props.moviesize == "opt"){
+                            } else if (props.moviesize == "opt") {
                                 return(<MovieOptions key={d.id} title={d.title} img={d.img}/>)
                             }
                             
