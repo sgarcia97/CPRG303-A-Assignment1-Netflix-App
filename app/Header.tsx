@@ -1,6 +1,6 @@
 import React from "react"
 import { BlurView } from "expo-blur"
-import {View, Text, Button, StyleSheet, Image, TouchableHighlight} from "react-native"
+import {View, Text, StyleSheet, TouchableHighlight} from "react-native"
 import { Icon } from "react-native-elements"
 
 type Head = {
@@ -18,7 +18,6 @@ const Header = (props:Head) => {
             </View>
         </BlurView>
     )
-
 }
 
 export default Header

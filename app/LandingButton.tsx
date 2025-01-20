@@ -1,5 +1,5 @@
 import React from "react"
-import {View, Text, StyleSheet, Image, TouchableHighlight} from "react-native"
+import {View, Text, StyleSheet, TouchableHighlight} from "react-native"
 import {Icon} from "react-native-elements"
 
 type ButtonProp = {
@@ -13,10 +13,8 @@ const LandingButton = (props: ButtonProp) => {
        
             <TouchableHighlight style={{flex:1}} onPress={()=>{alert(props.title)}}>
                 <View style={styles.button} ><Icon name={props.icon} type={props.type}/><Text style={styles.buttontext}>{props.title}</Text></View>
-            </TouchableHighlight>
-            
+            </TouchableHighlight>   
     )
-
 }
 
 export default LandingButton

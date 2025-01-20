@@ -1,8 +1,6 @@
 import React from "react"
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, Image, Platform } from 'react-native';
-import { createStaticNavigation, useNavigation } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Icon} from "react-native-elements"
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import MovieSection from "./MovieSection"
 import Filters from "./Filters"
 import Data from "./data.json"
@@ -13,51 +11,14 @@ import LandingButton from './LandingButton'
 const HomeScreen = () => {
 
     const navigation = useNavigation();
-      
-      type Person = {
-        name: string;
-        age: number;
-        isStudent?: boolean; //The ? mark means it is optional 
-        height: number;
-        //vac: vacationDest
-      }
-    
-      interface Person2 {
-        name: string; 
-        age: number;
-        isStudent: boolean;
-        height: number;
-      }
-    
-      const data: Person ={
-        name: "Jane Paul",
-        age: 25,
-        isStudent : true,
-        height: 5.11,
-        //vac: vacationDest("Canada")
-      }
-    
-      const data2: Person2 ={
-        name: "Peter Parker",
-        age: 43,
-        isStudent : true,
-        height: 6.2,
-      }
-    
-      const datalist = [data, data2];
-    
-      console.log(datalist[0].name);
-    
-    const name : string = "John Doe";
-    let count : number = 2;
-    let occupation: string = "Software Developer";
-     let imgg: string = 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaAjh2jshEy1jjYTgwnTruzPOUtn7iDI1X3K32f13dAeSd-uIhZdz3Jl_wOgp1v7J_vLVQ4rx0PFPedlWyFu2obLAnstM8Y_zvKYTcnnRYJDDnJ6J1K681aD4U5Xvxw1j1jpzw.jpg?r=c11&quot;';
+  
+    let imgg: string = 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaAjh2jshEy1jjYTgwnTruzPOUtn7iDI1X3K32f13dAeSd-uIhZdz3Jl_wOgp1v7J_vLVQ4rx0PFPedlWyFu2obLAnstM8Y_zvKYTcnnRYJDDnJ6J1K681aD4U5Xvxw1j1jpzw.jpg?r=c11&quot;';
       return (
     
     
-          <ScrollView style={styles.safearea} stickyHeaderIndices={[0]}>
-          <Header user="For George"/>
-       <View style={styles.section}>
+    <ScrollView style={styles.safearea} stickyHeaderIndices={[0]}>
+      <Header user="For Group 4"/>
+      <View style={styles.section}>
         
         <Filters/>
         <View style={styles.landing}>
@@ -70,23 +31,21 @@ const HomeScreen = () => {
               <LandingButton title="My List" icon="plus" type="feather"/>
             </View>
           </View>
-          
-          
         </View>
-        </View>
-        <View style={styles.mainsection}>
-          <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt"/>
-          <MovieSection subtitle="Because you watched Squid Game" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Today's Top Picks for You" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Critically Acclaimed Movies" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Only on Netflix" movies={Data} moviesize="big"/>
-          <MovieSection subtitle="Blockbuster Movies" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Relentless Crime Thrillers" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Your Next Watch" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
+      </View>
+      <View style={styles.mainsection}>
+        <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt"/>
+        <MovieSection subtitle="Because you watched Squid Game" movies={Data} moviesize="small"/>
+        <MovieSection subtitle="Today's Top Picks for You" movies={Data} moviesize="small"/>
+        <MovieSection subtitle="Critically Acclaimed Movies" movies={Data} moviesize="small"/>
+        <MovieSection subtitle="Only on Netflix" movies={Data} moviesize="big"/>
+        <MovieSection subtitle="Blockbuster Movies" movies={Data} moviesize="small"/>
+        <MovieSection subtitle="Relentless Crime Thrillers" movies={Data} moviesize="small"/>
+        <MovieSection subtitle="Your Next Watch" movies={Data} moviesize="small"/>
+        <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
     
-     </View>
-     </ScrollView>
+      </View>
+    </ScrollView>
       
     
     
