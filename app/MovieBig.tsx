@@ -9,7 +9,7 @@ type MovieProps = {
 
 const MovieBig = (props: MovieProps) => {
     const onPress = () => {
-        showAlert(props.title, 'Alert Button pressed', [
+        showAlert(props.title, 'Netflix', [
           { text: 'Cancel', style: 'cancel' },
           { text: 'OK', onPress: () => console.log('OK Pressed') },
         ]);

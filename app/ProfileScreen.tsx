@@ -1,8 +1,12 @@
 import React from "react"
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, Image, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import MovieSection from "./MovieSection"
 import Data from "./data.json"
+import Data1 from "./data1.json"
+import Data2 from "./data2.json"
+import Data3 from "./data3.json"
+import Data4 from "./data2.json"
 import Header from './Header'
 import Feather from 'react-native-vector-icons/Feather';
 import NotifItem from "./NotifItem";
@@ -80,7 +84,8 @@ const ProfileScreen = () => {
             </View>
             <View style={styles.mainsection}>
               <MovieSection subtitle="TV Shows & Movies You've Liked" movies={Data} moviesize="share" mylist={true} mylisttitle="See All"/>
-              <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
+              <MovieSection subtitle="My List" movies={Data1} moviesize="small"/>
+              <MovieSection subtitle="Continue Watching" movies={Data} moviesize="opt" />
             </View>
             <View style={styles.spacer}></View>
           </ScrollView>
@@ -98,8 +103,16 @@ const styles = StyleSheet.create({
       
     },
     spacer:{
-      height:160
-    },
+          ...Platform.select({
+            android:{
+              height:120
+            },
+            ios:{
+              height:160
+            }
+          })
+            
+          },
     container: {
       flex: 1,
       gap:10,

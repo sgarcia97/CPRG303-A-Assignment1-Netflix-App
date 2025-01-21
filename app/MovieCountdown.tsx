@@ -12,7 +12,7 @@ type MovieProps = {
 const MovieCountdown = (props: MovieProps) => {
 
     const onPress = () => {
-        showAlert(props.title, 'Alert Button pressed', [
+        showAlert(props.title, 'Netflix', [
           { text: 'Cancel', style: 'cancel' },
           { text: 'OK', onPress: () => console.log('OK Pressed') },
         ]);
@@ -57,9 +57,7 @@ const styles = StyleSheet.create({
     counttext:{
         fontSize:150,
         fontWeight:"bold",
-        color:"#fff",
-        
-       
+        color:"#fff", 
     },
     imageback:{
         position:"absolute",
