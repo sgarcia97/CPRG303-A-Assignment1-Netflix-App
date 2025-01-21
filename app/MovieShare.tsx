@@ -9,9 +9,9 @@ type MovieProps = {
 }
 
 const MovieShare = (props: MovieProps) => {
-    
+
     const onPress = () => {
-        showAlert(props.title, 'Netflix', [
+        showAlert(props.title, 'Share this movie', [
           { text: 'Cancel', style: 'cancel' },
           { text: 'OK', onPress: () => console.log('OK Pressed') },
         ]);

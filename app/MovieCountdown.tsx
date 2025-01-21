@@ -12,7 +12,7 @@ type MovieProps = {
 const MovieCountdown = (props: MovieProps) => {
 
     const onPress = () => {
-        showAlert(props.title, 'Netflix', [
+        showAlert(props.title, 'Netflix - Start watching', [
           { text: 'Cancel', style: 'cancel' },
           { text: 'OK', onPress: () => console.log('OK Pressed') },
         ]);

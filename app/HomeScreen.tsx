@@ -33,7 +33,6 @@ const shuffleData = (arr: Movie[]): Movie[] => {
 const HomeScreen = () => {
 
     const navigation = useNavigation();
-
     const newData = shuffleData(Data);
     const newData1 = shuffleData(Data1);
     const newData2 = shuffleData(Data2);

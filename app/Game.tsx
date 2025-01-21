@@ -12,7 +12,7 @@ type MovieProps = {
 const Game = (props: MovieProps) => {
 
     const onPress = () => {
-        showAlert(props.title, 'Netflix Games', [
+        showAlert(props.title, 'Netflix Games - Play Game', [
           { text: 'Cancel', style: 'cancel' },
           { text: 'OK', onPress: () => console.log('OK Pressed') },
         ]);
