@@ -17,22 +17,22 @@ import LinearGradient from "react-native-linear-gradient";
 
 const HomeScreen = () => {
 
-    const navigation = useNavigation();
-    const shuffleData = (a:any) => {
-        let n = Data.length, r, temp, b;
-        while(n > 1){
-            r = Math.floor(n* Math.random());
-            n -= 1;
-            temp = Data[n];
-            a[n] = a[r];
-            a[r] = temp;
-        }
-        b = a
-        return b;
-    }
+  interface Movie {
+    id: number;
+    title: string;
+    img: string;
+  }
+  const shuffleData = (arr: Movie[]): Movie[] => {
+    return arr
+      .map((item) => ({ ...item, sortKey: Math.random() }))
+      .sort((a, b) => a.sortKey - b.sortKey)
+      .map(({ sortKey, ...item }) => item);
+  };
 
-    const newData = shuffleData(Data4);
-    const newData1 = shuffleData(Data);
+  const newData = shuffleData(Data);
+  const newData1 = shuffleData(Data1);
+  const newData2 = shuffleData(Data2);
+  const newData3 = shuffleData(Data3);
     let imgg: string = 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaAjh2jshEy1jjYTgwnTruzPOUtn7iDI1X3K32f13dAeSd-uIhZdz3Jl_wOgp1v7J_vLVQ4rx0PFPedlWyFu2obLAnstM8Y_zvKYTcnnRYJDDnJ6J1K681aD4U5Xvxw1j1jpzw.jpg?r=c11&quot;';
 
       return (
@@ -62,11 +62,11 @@ const HomeScreen = () => {
         <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt" />
         <MovieSection subtitle="Because you watched Squid Game" movies={Data1} moviesize="small"/>
         <MovieSection subtitle="Today's Top Picks for You" movies={Data2} moviesize="small"/>
-        <MovieSection subtitle="Critically Acclaimed Movies" movies={Data3} moviesize="small"/>
+        <MovieSection subtitle="Critically Acclaimed Movies" movies={newData3} moviesize="small"/>
         <MovieSection subtitle="Only on Netflix" movies={Data} moviesize="big"/>
-        <MovieSection subtitle="Blockbuster Movies" movies={Data1} moviesize="small"/>
+        <MovieSection subtitle="Blockbuster Movies" movies={newData1} moviesize="small"/>
         <MovieSection subtitle="Top 10 In Canada" movies={CountData} moviesize="countdown"/>
-        <MovieSection subtitle="Your Next Watch" movies={Data2} moviesize="small"/>
+        <MovieSection subtitle="Your Next Watch" movies={newData2} moviesize="small"/>
         <MovieSection subtitle="My List" movies={Data3} moviesize="small"/>
     
       </View>
