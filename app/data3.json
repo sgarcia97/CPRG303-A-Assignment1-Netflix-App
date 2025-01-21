@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Honeymoon Crasher",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcpvBhko58n0t2zDpMB9i2J6bE76DPJ1rVakkO_91vJQtJka8nTG3k3JXo6q67SN1LoYAx7bKj_Sz8y9MrKKB8h6OmaXXVHZ435NAW2En1ADCfO_fo0RI3K2toDEcHrL3o-f3Q.jpg?r=71a&quot;"
+  },
+  {
+    "id": 2,
+    "title": "Melo Movie",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcoO7yX97rNM5FY8vKNjbPtk3nOQwl9xYFcz33k57BvNnjcmCPW0MZq4AqBRfPQ__GRG2Cwso8FroEfMbqrByBv_yQJwjjEKDc_SGvwOo1x0rQ2YAZ72gcAj4ubQwBjRPxgk0g.jpg?r=fdb&quot;"
+  },
+  {
+    "id": 3,
+    "title": "I Am Married... But!",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeXL7HBMU7ZyPDLqmga8hcmuFAWu9syOBoA9mxMwL4hlo1TdROgWMgYf5dwNUbSu6EesbNAstYwSpWF4WrqhtDZ1yh__5NdDqEAjDYRZVHC7Bc2YtpAR0bUZQit_D7D3IjhHGg.jpg?r=4c5&quot;"
+  },
+  {
+    "id": 4,
+    "title": "Valeria",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeXL7HBMU7ZyPDLqmga8hcmuFAWu9syOBoA9mxMwL4hlo1TdROgWMgYf5dwNUbSu6EesbNAstYwSpWF4WrqhtDZ1yh__5NdDqEAjDYRZVHC7Bc2YtpAR0bUZQit_D7D3IjhHGg.jpg?r=4c5&quot;"
+  },
+  {
+    "id": 5,
+    "title": "My Family",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeQCkHt4n6HYPY2GcVD-kayNYQgDJjjdoZMD9GbJIY-Gh6PlP5qxLIbpMHiwMXtHfU8eXTgF8rxscMkbybU09vv8peeSs6_jhKgqAAuDVEoeDMTF-OtvZT1GHpqEcE53uf7X1Q.jpg?r=862&quot;"
+  },
+  {
+    "id": 6,
+    "title": "Zero Day",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABeHayPEOMJFR12i0t2H0NzGuWRI43byGRHxfFuZ7RASqZcQlBeViJUMTmNU7nsOdH_7oK-IRgrRjm0GWfeQfCcKawYmt6W2fqzW9nhvROYjFKxh8FwnmZdQFl4BnRYYPGvA7hA.jpg?r=02f&quot;"
+  },
+  {
+    "id": 7,
+    "title": "Running Point",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABX58-ZcmVXiQuxR1l9VxIdS2P2cWuX4vK02dpX7jMCDUsdqTXXROoog6q_rU4d-tB4IX201fFyPyxBsIx_fHLkJ4o9altdcVpxdYloKCf2waOlF1pA02yviQddaAPrL8sv2zPA.jpg?r=03e&quot;"
+  },
+  {
+    "id": 8,
+    "title": "The Leopard",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZ85RVCdd8iwapdA2ZAYckPtZgVkQmFaYTjrn4YO4R6E6ZKkVE6kLElTWAEsD5fZUCUgKw0wfw7EKcq-tA3ehIh_wwKPVOhRo5pvhyXpsUD2xvYP60_Jl2dbcCOTN4k6nYTncQ.jpg?r=026&quot;"
+  },
+  {
+    "id": 9,
+    "title": "The Electric State",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABSoMmfJY3GAfqk5atbPa3g7yNHSxXiAyWLoOYG0rA28mbPP3WSdapcSBJey-BO3-yunUAm8TXRUD7f1BV3x4cIAuzY4-rpDj4AlvD3WCqJXn2FIiqRuVFcPNTed8Si3ClHvJxA.jpg?r=c27&quot;"
+  },
+  {
+    "id": 10,
+    "title": "The Residence",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABTLozOHmc0PeW8NUGz6EGj3s5XX9z980EgZFMWFk6bu_ksKWarajHjNhhVqYEAPjZUat3mEyhem6EMfcee54IjA-WwYvDvG5VstaYWkpUvarMv_QeLWeA7-0IroBKASMyRmOuQ.jpg?r=1fb&quot;"
+  },
+  {
+    "id": 11,
+    "title": "Rhythm + Flow Italy",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUJml_mXh-PRn5Ww0sVB2bCvFBZbE58MPhAfig6zchtUKFFaJ_DBPUSxtKXvAngG3SiKfBxJWQDazJHGCpFkJcpsa7xTHd56M1btC0Fhem2f38zj7R3rZ9XRRElwvKMNRCS-Mw.jpg?r=360&quot;"
+  },
+  {
+    "id": 12,
+    "title": "Devil May Cry",
+    "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYvEV88B_gxey4JwvcOF8ck64NH8pLJlz7nCPw6Wsz4wMI48vOrOGOhz9z7mlfSLz0EWQqYQtpXiXvotFa8gMkNRxPdQTW3J7fX8F7quBBJk-kFHx9E0wEBoqtJw3eT2HcTvfw.jpg?r=217&quot;"
+  }
+]
