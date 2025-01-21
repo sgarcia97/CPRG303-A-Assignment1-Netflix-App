@@ -6,6 +6,7 @@ import showAlert from './utils/showAlert';
 type MovieProps = {
     title: string;
     img: string;
+    category: string;
 }
 
 const Game = (props: MovieProps) => {
@@ -20,7 +21,7 @@ const Game = (props: MovieProps) => {
     return(
         <TouchableHighlight onPress={onPress}>
             <View style={styles.movie}>
-                <Image source={{uri:'../assets/dead_cells_appicon_en.png'}} resizeMode="cover" style={styles.imageback}></Image>
+            <Image source={{uri:props.img}} resizeMode="cover" style={styles.imageback}></Image>
                 <View style={styles.overlayborder}></View>
             </View>
         </TouchableHighlight>

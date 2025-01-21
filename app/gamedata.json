@@ -3,26 +3,31 @@
     {
       "id": 1,
       "title": "Dead Cells",
-      "img": "../assets/dead_cells_appicon_en.png"
+      "category": "Action",
+      "img": "https://s3.amazonaws.com/prod-cdata-secure.sprinklr.com/DAM/3877/fd59d447-5fb5-42fd-a83a-fca17085adc8-1399323110/deaths_door_appicon_en.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEM3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCICjyNQk8DBowTStdgJBNm9nYho4B6FV30Ns33wc5DdbkAiEA6D4brvuT5D4%2FbR912IM2RlDhdFWar2mOe3Mu3bE9bfoquQUIxf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw4NjkzNjc0NzE2NzQiDLymSLVi7o7rk2RinyqNBQ%2BzMQn4wQ272mbCKxbUGgqwLS6f6TAZYRhsxUSIEX8g9%2FCMOybHXDSosNL1eZgVcWin9WZsSX3iZCzZzjW%2BDGY1LT8mBlWe%2Fmk4YWkZD9WYc%2FWea%2B5DjbtUxumLy5bvogyAKdvVvH5eXt571YvOtn0%2B2o5rqwyx2bcOV2OI0wi2GyXYYF62FSB8tf3q3ccLjZyE6s9YQeKYsd6fy%2FJ8fsbpU%2FYaEyEoq2fd2v5arjFAa9Ztc4EVgl8MUOjtWS2eM7drMp5mbGI7pWYPvtIvNvysrutAIDz3n1I3zcMygqjI1hdz6nB7lP1Uny8QuW1UerOzO6hgyFqJdz%2B3%2F41N4v5YcjmjwlJ2YFp3apuYx2o6glYE6c7HKInXg37xcmuOZYz0LAbBnCljDMCg0UAyBa7KTK%2Fj4TM4SlGi7K9fziggKBioZgBomqWdsogWl11CTxrWd7vtGoj%2FqTBgtbT8CJrt1IkkE7soCCWhx%2FDM1c7la3r1fJDwV%2BkzghoeE35ZdA2CQLxAhO074x%2BtxAmkKD6chP2BMFaO2d%2FfJ4sJ0%2FKOeJzjIL0qJeFIJbVkcnYJAzBotRpZQvqA8E1CeNS2cSG0nHs8PT5gKfKYr7YiywKv4ES%2FGcl02bvC9THfSylQEJfBkGR2uRjxK9QE6cHk7MD9G2xslqbkBADbrKh3106cE8WWseovCLsI1wNWQjXEfPjrQvLKR1FhplMDDoiCo85ZSyH8sz2NTOYNqNRcTF70tt3D12fW%2FEct%2Fm6gr8fZMRBQXuYoUoP6sHNu%2FwgbYLGq%2Bl1gEKiZAFxYAEq4m9opyUHtAMCnu6%2FTCV9%2FNjBsZ%2BeFwR2AkoezKfe7cz0ZroNttOO2Q3MbgfMF84sFMPSBwLwGOrEBKsa71yS4LZQ220KuQemqsc6JS%2F3EyC29JNgjvsk94H1RGmMbMP%2FtO4brZwH1TISO4S9cemrvVRzeylTLTbKEbhxg7vKgniAOH1JUaITLwCXXdUWKhhaEB44d0EGhBH%2FgOotsTMop06S8u9xar39fsTRgTjzKzFzhx0OZKKgIhsAMgzsV1F1gEd3wEn6OlriO9nZKJgbgH3hNnAwA6g8BKGIykOaGdba%2Bfj%2BgdQeTIRRR&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250121T215825Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=ASIA4U2SW3Y5FWBEAQPV%2F20250121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=effea45d816ba0aab327a56ea8639835f45cb8d7f80411939c7eefae6dd9bc50"
     },
     {
       "id": 2,
       "title": "Grand Theft Auto",
+      "category": "Action/Adventure",
       "img": "../assets/grand_theft_auto_san_andreas_a.png"
     },
     {
       "id": 3,
       "title": "MV3",
+      "category": "Adventure",
       "img": "../assets/MV3_appicon_225_en.png"
     },
     {
       "id": 4,
       "title": "SGU",
+      "category": "Puzzle",
       "img": "../assets/SGU_appicon_225_en.png"
     },
     {
       "id": 5,
       "title": "Ultimatum",
+      "category": "Action",
       "img": "../assets/ultimatum_appicon_225_en.png"
     }
     

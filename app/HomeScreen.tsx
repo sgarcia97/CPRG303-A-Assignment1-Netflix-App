@@ -65,7 +65,7 @@ const HomeScreen = () => {
       
       <View style={styles.mainsection}>
 
-        <GameSection subtitle="Mobile Games" movies={Data} moviesize="game" mylist={true} mylisttitle="My List"/>
+        <GameSection subtitle="Mobile Games" mylist={true} mylisttitle="My List"/>
         <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt" />
         <MovieSection subtitle="Because you watched Squid Game" movies={Data1} moviesize="small"/>
         <MovieSection subtitle="Today's Top Picks for You" movies={Data2} moviesize="small"/>

@@ -6,15 +6,10 @@ import MyList from "./MyList"
 import Game from "./Game"
 type Games = {
     subtitle: string;
-    movies: any;
-    mylisttitle: string;
     mylist: boolean;
-    moviesize: string;
+    mylisttitle: string;
 }
 const GameSection = (props: Games) => {
- if(props.mylist){
-
- }
     return(
         <View style={{flex:1}}>
             <View style={styles.subtitlewrapper}><Text style={styles.subtitle}>{props.subtitle}</Text>{props.mylist ? <MyList title={props.mylisttitle}/> : ""}</View>
@@ -25,7 +20,7 @@ const GameSection = (props: Games) => {
                           
                             return(
                                 
-                            <Game key={d.id} title={d.title} img={d.img}/>
+                            <Game key={d.id} title={d.title} img={d.img} category={d.category}/>
                             )
                             
                         })
