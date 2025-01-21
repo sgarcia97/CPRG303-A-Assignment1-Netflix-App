@@ -1,5 +1,5 @@
 import React from "react"
-import {View, StyleSheet, Image, ImageBackground, TouchableHighlight} from "react-native"
+import {View, StyleSheet, Image, Text, ImageBackground, TouchableHighlight} from "react-native"
 import showAlert from './utils/showAlert';
 
 
@@ -17,12 +17,16 @@ const Game = (props: MovieProps) => {
           { text: 'OK', onPress: () => console.log('OK Pressed') },
         ]);
     };
-    let im:string = (props.img as unknown) as string
+
     return(
         <TouchableHighlight onPress={onPress}>
             <View style={styles.movie}>
             <Image source={{uri:props.img}} resizeMode="cover" style={styles.imageback}></Image>
                 <View style={styles.overlayborder}></View>
+                <View>
+                    <Text style={{fontWeight:600, color:"#fff"}}>{props.title}</Text>
+                    <Text style={{color:"#bababa"}}>{props.category}</Text>
+                </View>
             </View>
         </TouchableHighlight>
     );
@@ -30,7 +34,7 @@ const Game = (props: MovieProps) => {
 
 const styles = StyleSheet.create({
     movie :{
-        height:112,
+        position:"relative",
     width:112,
     borderRadius:5,
   
@@ -39,14 +43,11 @@ const styles = StyleSheet.create({
         color:"#fff"
     },
     imageback:{
-        position:"absolute",
-        top:0,
-        bottom:0,
-        left:0,
-        right:0,
-        borderRadius:24,
+        position:"relative",
+        height:112,
         width:112,
-        height:112
+        borderRadius:24,
+       
     },
     overlayborder:{
         position:"absolute",
