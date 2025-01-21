@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Image, StatusBar } from "react-native";
+import { StyleSheet, Image, StatusBar, Platform, View } from "react-native";
 import {BlurView} from "expo-blur"
 import { createStaticNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -37,7 +37,7 @@ const MyTabs = createBottomTabNavigator({
     tabBarInactiveTintColor: '#909090',
     tabBarStyle: { position: 'absolute', borderTopWidth:0 },
     tabBarBackground: () => (
-      <BlurView tint="dark" intensity={100} style={StyleSheet.absoluteFill} />
+      <BlurView tint="dark" intensity={100} style={styles.tabbar} ><View style={styles.tabtint}></View></BlurView>
     )
   }),
   screens:{
@@ -66,4 +66,31 @@ const Navigation = createStaticNavigation(MyTabs);
 export default function App() {
   return <><StatusBar/><Navigation /></>
 }
+
+const styles = StyleSheet.create({
+  tabbar:{
+    ...StyleSheet.absoluteFillObject,
+    ...Platform.select({
+      android:{
+        backgroundColor:"#000000",
+        opacity:1
+      },
+      ios:{
+        
+      }
+    }),
+  },
+  tabtint:{
+    ...Platform.select({
+      android:{
+        position:"absolute",
+        top:0,
+        bottom:0,
+        left:0,
+        right:0,
+        backgroundColor:"#000"
+      }
+    })
+  }
+})
 

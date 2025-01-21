@@ -4,6 +4,7 @@ import Movie from "./Movie"
 import MovieBig from "./MovieBig"
 import MovieOptions from "./MovieOptions"
 import MovieShare from "./MovieShare"
+import MovieCountdown from "./MovieCountdown"
 import Data from "./data.json"
 import MyList from "./MyList"
 
@@ -30,6 +31,8 @@ const MovieSection = (props) => {
                                 return(<MovieOptions key={d.id} title={d.title} img={d.img}/>)
                             }else if (props.moviesize == "share") {
                                 return(<MovieShare key={d.id} title={d.title} img={d.img}/>)
+                            }else if (props.moviesize == "countdown") {
+                                return(<MovieCountdown key={d.id} title={d.title} img={d.img} count={d.count}/>)
                             }
                             
                         })

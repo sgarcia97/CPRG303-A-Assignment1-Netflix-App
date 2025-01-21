@@ -12,7 +12,9 @@ const Movie = (props: MovieProps) => {
     return(
         <TouchableHighlight onPress={onPress}>
         <View style={styles.movie}>
-        <View style={styles.playbutton}><Icon name="play-circle" type="feather" color="#fff" size={50}/></View>
+        <View style={styles.playbutton}>
+            <View style={styles.playicon}><Image style={{width:35, height:35, marginLeft:4}}source={require('../assets/play-button-arrowhead.png')} /></View>
+            </View>
             <Image source={{uri:props.img}} resizeMode="cover" style={styles.imageback}>
             </Image>
             <View style={styles.morewrapper}>
@@ -56,10 +58,23 @@ const styles = StyleSheet.create({
        flex:1,
        flexDirection:"column",
        justifyContent:"center",
-        zIndex:2
+       alignItems:"center",
+       zIndex:2
+    },
+    playicon:{
+        width:70,
+        height:70,
+        borderRadius:100,
+        borderWidth:1,
+        borderColor:"#ffffff",
+        backgroundColor:"#000000",
+        opacity:0.7,
+        display:"flex",
+        flexDirection:"row",
+        justifyContent:"center",
+        alignItems:"center"
     },
     imageback:{
-       
         width:112,
         height:160,
         borderTopLeftRadius:5,

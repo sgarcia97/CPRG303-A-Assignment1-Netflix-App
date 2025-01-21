@@ -4,8 +4,14 @@ import {View,ScrollView,Text,StyleSheet,FlatList} from "react-native"
 import GameData from "./gamedata.json"
 import MyList from "./MyList"
 import Game from "./Game"
-
-const MovieSection = (props) => {
+type Games = {
+    subtitle: string;
+    movies: any;
+    mylisttitle: string;
+    mylist: boolean;
+    moviesize: string;
+}
+const GameSection = (props: Games) => {
  if(props.mylist){
 
  }
@@ -30,7 +36,7 @@ const MovieSection = (props) => {
     )
 }
 
-export default MovieSection;
+export default GameSection;
 
 const styles = StyleSheet.create({
     subtitle : {
