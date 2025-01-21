@@ -3,61 +3,73 @@
   {
     "id": 1,
     "title": "Jerry Springer - Fights, Camera, Action",
+    "statmsg":"Recently Added",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUpumRo5l9qxtEs3zb1h7SoS4_hIMK0PN7MdcHWOAglrABtGh8JO7iBcKP9vwupglwdsFBU4pko4w1AHR0Beq-IPMGsLiFHEX1hKvI9vVRkWOZ7Kzn6vwG9xzexCoRPqPJDzhQ.jpg?r=590&quot;"
   },
   {
     "id": 2,
     "title": "The Love Scam",
+    "statmsg":"",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABV1gf9SAeYgfuIizP33uZ_DKBoN2bBMkG0zinemxc2oBQzR-rOe_VpsWV1yGarP36ZIP6-3ki3pI7rLofE435WYCIjbfVbsKdvkkjCTP4OmuIHR6r47zJAIhk14d7SdCc6Xbsw.jpg?r=53a&quot;"
   },
   {
     "id": 3,
     "title": "Missing You",
+    "statmsg":"",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVAfwIiZurkRthRQvAWMtIhydvB7igQ4VzZjViNDNFfvGEdpAev_3iSj_owduwmC-P-k9hJw5j4dDTtTpqJuQtNtLPY3NOc7He_yF-rOQiAlTYxeVUn0_enGLNAW3b0bq2gGuQ.jpg?r=bde&quot;"
   },
   {
     "id": 4,
     "title": "I am a Killer",
+    "statmsg":"",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABd_19z8XMZd7NaV-Lp78nH1hnNNtSOng3Kz69hmR1-sZXomRdR_6qNUDTYrTfODIuGvfYLt-L__N80vDeKgcje3g4wDC80f70M7I6S3bNqYsp-5xkqmUtlRtDES0dy7LRMZm3g.jpg?r=e5c&quot;"
   },
   {
     "id": 5,
     "title": "Fake Profile",
+    "statmsg":"",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcgXm3P5f73PwR4q8tSKp-q-C2rErlkMiiLFVP8U67qWKyAv0TPvtdHc9La1Axra5fdk0fwMQKR26hnmtJjPuW743ukjJjdcya7yeV-4jNtneGq6etghY3nltBHUVVMUY4SGSg.jpg?r=49c&quot;"
   },
   {
     "id": 6,
     "title": "American Primeval",
+    "statmsg":"Leaving soon",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABf7521nGS9Jca5Rh14fgT-MmI67m7EtGvoiMeEHcbS-vkizLH0f4ovLq8Tvo-U8mjBQr60PoYfR9CaIK8-7eEnEzy7tKBTR-gVK5UupfXvGUEi6jw8SYL3hPG_YQxksrcpTJFQ.jpg?r=622&quot;"
   },
   {
     "id": 7,
     "title": "The Upshaws",
+    "statmsg":"",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABS7p43VoWflTK80EGHsOK_VDaYrmSIp8d5fK4LGpfOFxfPKqe3cDWSvO6M-hhVUFyI7NOk74w1V0KyEPA4-1S4dVFPMzoj1lJJ3JekXK-F_IwCEsDdaaJt_dZqZ9-JWo20YYpA.jpg?r=54a&quot;"
   },
   {
     "id": 8,
     "title": "Singles Inferno",
+    "statmsg":"",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABTwRDZGxQtCECMeGVaxslHtJkAx2iBD_OGwYwmGF5cIcDNQSbDHPhOq46UTdgSlv07CHNG1c5gOuQDmnnJ1ypZtEtDcrxeS2xgU5-fHPbLplBcF8J0vizdLTrOsZV-jxmttKQQ.jpg?r=c5e&quot;"
   },
   {
     "id": 9,
     "title": "With Love Meghan",
+    "statmsg":"",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABfOPIeuU97LNA1igXVCvsxpQzjAV6KRTms6lU4qZkYRp7e052842bS7Sr0f_pkU7Y0CzMRPWKwQfVTkIqVVApcTt7A8BvtIEcResiOunm0e18dQhzf4lD54ROgMTdWK1WU1RXg.jpg?r=1cb&quot;"
   },
   {
     "id": 10,
     "title": "Lovers Anonmynous",
+    "statmsg": "Leaving soon",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABR7h5CaE20NeZUXJ6FMhsi1hYOYMiB-q5Z4Wt3VKmGLBNxJrcXWV3w6_QUWOal42AXG72oGJ4-kRYlZksbi30XTUuQCcuNqwurwUwZ5oP8W1-eFSqRDQzM_PsJb-EuU4uOX_yw.jpg?r=6a8&quot;"
   },
   {
     "id": 11,
     "title": "Back In Action",
+    "statmsg":"Recently added",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaAjh2jshEy1jjYTgwnTruzPOUtn7iDI1X3K32f13dAeSd-uIhZdz3Jl_wOgp1v7J_vLVQ4rx0PFPedlWyFu2obLAnstM8Y_zvKYTcnnRYJDDnJ6J1K681aD4U5Xvxw1j1jpzw.jpg?r=c11&quot;"
   },
   {
     "id": 12,
     "title": "The Night Agent",
+    "statmsg":"New Season",
     "img": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUwWRmGF1OzIKUpCVdD-So3V365rtmk_Sq5Am5RI_ZorZ3PlbnEjf3HDKgMIJgdG9o9bvqOsj8J4G13uV9T1N4UnVVQH-y_nIMU8KSidXRP99SiNH_awD8XjChjq9JVhOKJOWg.jpg?r=14c&quot;"
   } 
 ]

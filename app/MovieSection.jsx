@@ -23,10 +23,10 @@ const MovieSection = (props) => {
                             if(props.moviesize == "small") {
                             return(
                                 
-                            <Movie key={d.id} title={d.title} img={d.img}/>
+                            <Movie key={d.id} title={d.title} img={d.img} stat={d.statmsg}/>
                             )
                             } else if (props.moviesize == "big") {
-                                return(<MovieBig key={d.id} title={d.title} img={d.img}/>)
+                                return(<MovieBig key={d.id} title={d.title} img={d.img} stat={d.statmsg}/>)
                             } else if (props.moviesize == "opt") {
                                 return(<MovieOptions key={d.id} title={d.title} img={d.img}/>)
                             }else if (props.moviesize == "share") {

@@ -1,11 +1,15 @@
 import React from "react"
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, Image, Platform } from 'react-native';
 import { createStaticNavigation, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Icon} from "react-native-elements"
 import MovieSection from "./MovieSection"
 import Filters from "./Filters"
 import Data from "./data.json"
+import Data1 from "./data1.json"
+import Data2 from "./data2.json"
+import Data3 from "./data3.json"
+import Data4 from "./data2.json"
 import Header from './Header'
 import LandingButton from './LandingButton'
 
@@ -20,15 +24,10 @@ const New = () => {
       <Header user="New & Hot" filters={false}/>
         <View style={styles.mainsection}>
           <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt"/>
-          <MovieSection subtitle="Because you watched Squid Game" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Today's Top Picks for You" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Critically Acclaimed Movies" movies={Data} moviesize="small"/>
+          <MovieSection subtitle="Because you watched Squid Game" movies={Data1} moviesize="small"/>
+          <MovieSection subtitle="Today's Top Picks for You" movies={Data2} moviesize="small"/>
+          <MovieSection subtitle="Critically Acclaimed Movies" movies={Data3} moviesize="small"/>
           <MovieSection subtitle="Only on Netflix" movies={Data} moviesize="big"/>
-          <MovieSection subtitle="Blockbuster Movies" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Relentless Crime Thrillers" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="Your Next Watch" movies={Data} moviesize="small"/>
-          <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
-    
      </View>
      <View style={styles.spacer}></View>
      </ScrollView>
@@ -46,8 +45,16 @@ const styles = StyleSheet.create({
       backgroundColor:"#000"
     },
     spacer:{
-      height:160
-    },
+      ...Platform.select({
+        android:{
+          height:120
+        },
+        ios:{
+          height:160
+        }
+      })
+        
+      },
     container: {
       flex: 1,
       gap:10,

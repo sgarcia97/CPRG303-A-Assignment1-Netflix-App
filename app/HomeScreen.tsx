@@ -9,7 +9,8 @@ import Data from "./data.json"
 import Data1 from "./data1.json"
 import Data2 from "./data2.json"
 import Data3 from "./data3.json"
-import GameData from "./gamedata.json"
+import Data4 from "./data2.json"
+
 import CountData from "./countdown.json"
 import Header from './Header'
 import LandingButton from './LandingButton'
@@ -37,6 +38,7 @@ const HomeScreen = () => {
     const newData1 = shuffleData(Data1);
     const newData2 = shuffleData(Data2);
     const newData3 = shuffleData(Data3);
+
     let imgg: string = 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaAjh2jshEy1jjYTgwnTruzPOUtn7iDI1X3K32f13dAeSd-uIhZdz3Jl_wOgp1v7J_vLVQ4rx0PFPedlWyFu2obLAnstM8Y_zvKYTcnnRYJDDnJ6J1K681aD4U5Xvxw1j1jpzw.jpg?r=c11&quot;';
 
       return (
@@ -51,7 +53,7 @@ const HomeScreen = () => {
           <Image style={styles.imageback} source={{uri:imgg}}></Image>
           <View style={styles.imagetint}></View>
           <View style={styles.landingfooter}>
-            <Text style={styles.landingdesc}>Action {'\u2022'} Adventure {'\u2022'} Comedy Thrill-ride</Text>
+            <Text style={styles.landingdesc}>Action <Text style={styles.mdot}>{'\u2022'}</Text> Adventure <Text style={styles.mdot}>{'\u2022'}</Text> Comedy <Text style={styles.mdot}>{'\u2022'}</Text> Thrill-ride</Text>
             <View style={styles.buttonwrapper}>
               <LandingButton title="Play" icon="play" type="font-awesome"/>
               <LandingButton title="My List" icon="plus" type="feather"/>
@@ -62,16 +64,17 @@ const HomeScreen = () => {
       </View>
       
       <View style={styles.mainsection}>
-        <GameSection subtitle="Mobile Games" movies={GameData} moviesize="game" mylist={true} mylisttitle="My List"/>
-        <MovieSection subtitle="Continue Watching for Group 4" movies={newData} moviesize="opt" />
-        <MovieSection subtitle="Because you watched Squid Game" movies={Data} moviesize="small"/>
-        <MovieSection subtitle="Today's Top Picks for You" movies={newData1} moviesize="small"/>
-        <MovieSection subtitle="Critically Acclaimed Movies" movies={newData2} moviesize="small"/>
-        <MovieSection subtitle="Only on Netflix" movies={newData3} moviesize="big"/>
-        <MovieSection subtitle="Blockbuster Movies" movies={Data} moviesize="small"/>
+
+        <GameSection subtitle="Mobile Games" movies={Data} moviesize="game" mylist={true} mylisttitle="My List"/>
+        <MovieSection subtitle="Continue Watching for Group 4" movies={Data} moviesize="opt" />
+        <MovieSection subtitle="Because you watched Squid Game" movies={Data1} moviesize="small"/>
+        <MovieSection subtitle="Today's Top Picks for You" movies={Data2} moviesize="small"/>
+        <MovieSection subtitle="Critically Acclaimed Movies" movies={newData3} moviesize="small"/>
+        <MovieSection subtitle="Only on Netflix" movies={Data} moviesize="big"/>
+        <MovieSection subtitle="Blockbuster Movies" movies={newData1} moviesize="small"/>
         <MovieSection subtitle="Top 10 In Canada" movies={CountData} moviesize="countdown"/>
-        <MovieSection subtitle="Your Next Watch" movies={newData1} moviesize="small"/>
-        <MovieSection subtitle="My List" movies={newData2} moviesize="small"/>
+        <MovieSection subtitle="Your Next Watch" movies={newData2} moviesize="small"/>
+        <MovieSection subtitle="My List" movies={Data3} moviesize="small"/>
     
       </View>
       <View style={styles.spacer}></View>
@@ -90,7 +93,15 @@ const styles = StyleSheet.create({
       backgroundColor:"#000"
     },
     spacer:{
-        height:160
+      ...Platform.select({
+        android:{
+          height:120
+        },
+        ios:{
+          height:160
+        }
+      })
+        
       },
     container: {
       flex: 1,
@@ -107,6 +118,9 @@ const styles = StyleSheet.create({
       left:0,
       right:0,
       borderRadius:10
+  },
+  mdot:{
+    color:"red"
   },
   headertint:{
           ...Platform.select({

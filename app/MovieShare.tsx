@@ -1,6 +1,7 @@
 import React from "react"
 import {View, Text, StyleSheet, ImageBackground, Image, TouchableNativeFeedback, TouchableHighlight} from "react-native"
 import {Icon} from "react-native-elements"
+import showAlert from './utils/showAlert';
 
 type MovieProps = {
     title: string;
@@ -8,7 +9,14 @@ type MovieProps = {
 }
 
 const MovieShare = (props: MovieProps) => {
-    const onPress = () => {alert(props.title)}
+    
+    const onPress = () => {
+        showAlert(props.title, 'Netflix', [
+          { text: 'Cancel', style: 'cancel' },
+          { text: 'OK', onPress: () => console.log('OK Pressed') },
+        ]);
+    }
+
     return(
         <TouchableHighlight onPress={onPress}>
         <View style={styles.movie}>
