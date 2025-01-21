@@ -6,30 +6,37 @@ import MovieSection from "./MovieSection"
 import GameSection from "./GameSection"
 import Filters from "./Filters"
 import Data from "./data.json"
+import Data1 from "./data1.json"
+import Data2 from "./data2.json"
+import Data3 from "./data3.json"
+import GameData from "./gamedata.json"
 import CountData from "./countdown.json"
 import Header from './Header'
 import LandingButton from './LandingButton'
 import LinearGradient from "react-native-linear-gradient";
 
+interface Movie {
+  id: number;
+  title: string;
+  img: string;
+}
+
+const shuffleData = (arr: Movie[]): Movie[] => {
+  return arr
+    .map((item) => ({ ...item, sortKey: Math.random() }))
+    .sort((a, b) => a.sortKey - b.sortKey)
+    .map(({ sortKey, ...item }) => item);
+};
+
+
 const HomeScreen = () => {
 
     const navigation = useNavigation();
-    const shuffleData = (a:any) => {
-        let n = Data.length, r, temp;
-        while(n > 1){
-            r = Math.floor(n* Math.random());
-            n -= 1;
-            temp = Data[n];
-            a[n] = a[r];
-            a[r] = temp;
-        }
-
-        return a;
-    }
 
     const newData = shuffleData(Data);
-    const newData1 = shuffleData(Data);
-    const newData2 = shuffleData(Data);
+    const newData1 = shuffleData(Data1);
+    const newData2 = shuffleData(Data2);
+    const newData3 = shuffleData(Data3);
     let imgg: string = 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaAjh2jshEy1jjYTgwnTruzPOUtn7iDI1X3K32f13dAeSd-uIhZdz3Jl_wOgp1v7J_vLVQ4rx0PFPedlWyFu2obLAnstM8Y_zvKYTcnnRYJDDnJ6J1K681aD4U5Xvxw1j1jpzw.jpg?r=c11&quot;';
 
       return (
@@ -55,16 +62,16 @@ const HomeScreen = () => {
       </View>
       
       <View style={styles.mainsection}>
-        <GameSection subtitle="Mobile Games" movies={Data} moviesize="game" mylist={true} mylisttitle="My List"/>
+        <GameSection subtitle="Mobile Games" movies={GameData} moviesize="game" mylist={true} mylisttitle="My List"/>
         <MovieSection subtitle="Continue Watching for Group 4" movies={newData} moviesize="opt" />
         <MovieSection subtitle="Because you watched Squid Game" movies={Data} moviesize="small"/>
         <MovieSection subtitle="Today's Top Picks for You" movies={newData1} moviesize="small"/>
         <MovieSection subtitle="Critically Acclaimed Movies" movies={newData2} moviesize="small"/>
-        <MovieSection subtitle="Only on Netflix" movies={Data} moviesize="big"/>
+        <MovieSection subtitle="Only on Netflix" movies={newData3} moviesize="big"/>
         <MovieSection subtitle="Blockbuster Movies" movies={Data} moviesize="small"/>
         <MovieSection subtitle="Top 10 In Canada" movies={CountData} moviesize="countdown"/>
-        <MovieSection subtitle="Your Next Watch" movies={Data} moviesize="small"/>
-        <MovieSection subtitle="My List" movies={Data} moviesize="small"/>
+        <MovieSection subtitle="Your Next Watch" movies={newData1} moviesize="small"/>
+        <MovieSection subtitle="My List" movies={newData2} moviesize="small"/>
     
       </View>
       <View style={styles.spacer}></View>
