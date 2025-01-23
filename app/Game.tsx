@@ -21,8 +21,9 @@ const Game = (props: MovieProps) => {
     return(
         <TouchableHighlight onPress={onPress}>
             <View style={styles.movie}>
-            <Image source={{uri:props.img}} resizeMode="cover" style={styles.imageback}></Image>
+            <View style={{marginBottom:4}}><Image source={{uri:props.img}} resizeMode="cover" style={styles.imageback}></Image>
                 <View style={styles.overlayborder}></View>
+                </View>
                 <View>
                     <Text style={{fontWeight:600, color:"#fff"}}>{props.title}</Text>
                     <Text style={{color:"#bababa"}}>{props.category}</Text>
