@@ -8,17 +8,18 @@ type Head = {
     user : string;
     filters: boolean;
 }
-
+// Default Sticky header for pages 
 const Header = (props:Head) => {
+    
     return(
         <BlurView intensity={100} tint="dark" style={styles.filterwrapper}>
             <View style={styles.headertint}></View>
             <View style={styles.headwrapper}>
             <Text style={styles.headertext}>{props.user}</Text>
             <View style={styles.headerbuttons}>
-                <TouchableHighlight><Icon onPress={()=>{alert("test")}} name="cast" type="feather" color="#ffffff" size={25}/></TouchableHighlight>
-                <TouchableHighlight><Icon onPress={()=>{alert("test")}} name="download" type="feather" color="#ffffff" size={25}/></TouchableHighlight>
-                <TouchableHighlight><Icon onPress={()=>{alert("test")}} name="search" type="feather" color="#ffffff" size={25}/></TouchableHighlight>
+                <TouchableHighlight><Icon onPress={()=>{alert("Cast to your device")}} name="cast" type="feather" color="#ffffff" size={25}/></TouchableHighlight>
+                <TouchableHighlight><Icon onPress={()=>{alert("Your Downloads")}} name="download" type="feather" color="#ffffff" size={25}/></TouchableHighlight>
+                <TouchableHighlight><Icon onPress={()=>{alert("Search Movies and TV Shows")}} name="search" type="feather" color="#ffffff" size={25}/></TouchableHighlight>
             </View>
             </View>
             { props.filters ? <Filters/> : ''}
