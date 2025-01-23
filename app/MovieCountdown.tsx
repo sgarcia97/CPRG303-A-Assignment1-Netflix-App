@@ -1,5 +1,5 @@
 import React from "react"
-import {View, StyleSheet, Image, TouchableHighlight,Text} from "react-native"
+import {View, StyleSheet, Image, TouchableHighlight,Text, Platform} from "react-native"
 import showAlert from './utils/showAlert';
 
 
@@ -47,11 +47,22 @@ const styles = StyleSheet.create({
     count:{
         width:170,
         height:160,
-
+        position:"relative"
     },
     counttextwrapper:{
-     
-        left:0,
+       
+       ...Platform.select({
+        android:{
+            left:0,
+            bottom:0
+        },ios:{
+            position:"absolute",
+            top:15,
+            left:6
+        }
+       }),
+        
+        
         bottom:5
     },
     counttext:{
